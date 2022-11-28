@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 9</title>
+  <script src="main.js" type="module"></script>
 
   <style>
     button {
@@ -83,10 +84,17 @@
       <button>Start Timer</button>
       <button>End Timer</button>
       <button>Console Trace</button>
+      <!-- <button>Console Cbnt</button> -->
       <button>Trigger a Global Error</button>
     </section>
   </main>
-
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS && TrackJS.install({ 
+      token: "076af44c3b224e8cb53f5937653f07d8"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
   <script>
     let form = document.querySelector('form');
     form.addEventListener('submit', e => {
